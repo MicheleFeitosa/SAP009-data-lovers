@@ -1,13 +1,18 @@
-// estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
+export const filtrarPorFuncao = (arrayAllChampions,funcao) => {
+  return arrayAllChampions.filter((champion)=>champion.tags.includes(funcao));
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+
+export const ordenacaoAz = (arrayAllChampions) => {
+  return [
+    ...arrayAllChampions.map( x => ({...x}))].sort((a, b) => { //recriar um array pra ser ordenado 
+    return a.name < b.name ? -1 : 1; 
+  });
 };
 
-export const filterTags = (data,typeData, condition) => data.filter((tag) => {
-  return (tag[typeData] === condition);
-})
+
+export const ordenacaoZa = (arrayAllChampions) => {
+  return ordenacaoAz(arrayAllChampions).reverse()
+}
+

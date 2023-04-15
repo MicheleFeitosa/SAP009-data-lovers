@@ -1,23 +1,48 @@
-import { example, anotherExample } from '../src/data.js';
+import { filtrarPorFuncao, ordenacaoAz, ordenacaoZa } from "../src/data.js";
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+const exampleChampions = [
+  {
+    name: "Aatrox",
+    tags: "Fighter",
+  },
+  {
+    name: "Fiora",
+    tags:"Assassin",
+  },
+  {
+    name: "Rumble",
+    tags:  "Mage",
+  }
+]
+
+describe("filtrarPorFuncao", () => {
+  it("is a function", () => {
+    expect(typeof filtrarPorFuncao).toBe("function");
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it("must filter by role of champion", () => {
+    expect(filtrarPorFuncao(exampleChampions,"Mage")).toStrictEqual([exampleChampions[2]]);
   });
 });
 
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+describe("ordenacaoAz", () => {
+  it("is a function", () => {
+    expect(typeof ordenacaoAz).toBe("function");
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it("Sort the characters from A to Z", () => {
+    expect(ordenacaoAz(exampleChampions)).toStrictEqual(exampleChampions);
   });
 });
+
+describe("ordenacaoZa", () => {
+  it("is a function", () => {
+    expect(typeof ordenacaoZa).toBe("function");
+  });
+
+  it("Sort the characters from Z to A", () => {
+    expect(ordenacaoZa(exampleChampions)).toStrictEqual([exampleChampions[2],exampleChampions[1],exampleChampions[0]]);
+  });
+});
+
