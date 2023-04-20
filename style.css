@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
+body {
+    height: 100vh; /*ocupar 100% da tela (viewport)*/
+    box-sizing: border-box; /*pro elemento filho se adequar ao tamanho do conteúdo do elemento pai*/
+    background-image: url(./card-imgs/BackGround.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1,h2 {
+    font-weight:bold;
+    text-align:center;
+    color: aliceblue;
+    background-color: #6449CE;
+    font-family: 'Caudex', serif;
+}
+h1{
+    background:#4429A6;
+}
+h2{
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 100px;
+}
+header > img {
+    width: 450px;
+    margin-left: 400px; 
+}
+
+a{
+    text-decoration: none;
+    color:antiquewhite;
+}
+
+.selecionar{
+    text-align: center;
+    background-color: #6449CE;
+    padding-bottom: 10px;
+    font-family: 'Caudex', serif;
+   
+}
+
+.dataButtons{
+    font-family: 'Caudex', serif;
+    color:white;
+    background:#4429A6;
+    border-radius: 4px;
+}
+
+main{
+    background-color: #6449CE;
+    margin: 10px;
+}
+
+.printar__cards{
+    display: inline-block;
+   
+}
+.cards{
+    display:inline-block;
+    flex-grow: 1; 
+    justify-content: space-between;
+    border: 1px solid aliceblue;
+    margin: 10px 16px;
+    padding:0;
+    border-radius: 3px;
+    
+}
+
+.cards > img {
+    width: 170px;
+    height: 170px;
+    flex-grow: 1;
+}
+  
+.texto{
+   
+   font-family: 'Caudex', serif; 
+   text-align: center;
+   color:aliceblue;
+   padding:auto;
+}
+
